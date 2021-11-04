@@ -11,11 +11,12 @@ const object = {
   a: 'b',
   c: 123,
 }
+const number = 1
 
 test('获取原始数据类型', () => {
   expect(getRawDataType(array)).toBe("Array")
   expect(getRawDataType(object)).toBe("Object")
-  expect(getRawDataType(object)).toBe("Number")
+  expect(getRawDataType(number)).toBe("Number")
 })
 
 test('test isArray true', () => {

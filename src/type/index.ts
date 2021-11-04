@@ -43,3 +43,12 @@ export const isArray = (value:any): boolean => {
     return getRawDataType(value) === 'Number';
   }
   
+   /**
+ * 是否是Function
+ * @param {*} value 
+ * @returns {Boolean}
+ */
+    export const isFunction = (value:any): boolean => {
+      return getRawDataType(value) === 'Function';
+    }
+    
