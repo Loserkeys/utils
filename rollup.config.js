@@ -2,7 +2,7 @@ import resolve from 'rollup-plugin-node-resolve';
 import babelPlugin from "rollup-plugin-babel";
 import commonjs from 'rollup-plugin-commonjs';
 import typescript from 'rollup-plugin-typescript';
-import { uglify } from "rollup-plugin-uglify";
+// import { uglify } from "rollup-plugin-uglify";
 
 import pkg from './package.json';
 
@@ -11,7 +11,7 @@ export default {
   output: { // 打包出口
     file: pkg.browser, // 最终打包出来的文件路径和文件名，这里是在package.json的browser: 'dist/index.js'字段中配置的
     format: 'umd', // umd是兼容amd/cjs/iife的通用打包格式，适合浏览器
-    name: "main"
+    name: "index"
   },
   plugins: [ // 打包插件
     resolve(), // 查找和打包node_modules中的第三方模块
@@ -21,6 +21,6 @@ export default {
       exclude: "node_modules/**",
       runtimeHelpers: true,
     }),
-    uglify()
+    // uglify()
   ]
 };
